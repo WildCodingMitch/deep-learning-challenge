@@ -1,27 +1,22 @@
-# Module 21 Report Template
+# Module 21 Report
+### Mitchell Fairgrieve
 
-## Overview of the Analysis
+### Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+* The purpose of this analysis was to train a neural network model to predict application types for charity data.
+* The model is predicting based on the other columns. For example, by using the CLASSIFICATION, AFFILIATION, & INCOME_AMT to predict the application type.
+* To predict the data it was pivitol to take a deeper look. Using functions like nunique() and value.counts() we were able to access the data and determine which columns would be most useful in the analysis.
+* The model used in this case was a keras Sequential model. This model is very common and is familiar to many neural network users. This, along with the ease of use, is why I chose to implement this model type.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
-
-## Results
-
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
+### Results
 
 * Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+    * The model ended up having a total of 4,341 params. This seemed like a good amount to get the desired accuracy of 75%, however the actual numbers were not as good.
+    * Loss: 0.5574989318847656, Accuracy: 0.7244315147399902
 
-## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
+### Summary
 
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+* After running this analysis I feel a more in depth model may have been better for this data.
+* It is also important to note that 100 epochs was too many and resulted in overfitting of the model. We can see this from epochs 57-59 where the accuracy fluctuated between 74.24% to 73.67% and then finally to 73.69%. These fluctuations occurred repeatidly throughout the epochs.
+* I would not reccomend using this model again, and if I were to do it again I would switch the model to have more processing layers, along with more parameters to better train the model.
